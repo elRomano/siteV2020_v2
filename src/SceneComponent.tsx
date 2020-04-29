@@ -1,5 +1,4 @@
 import * as BABYLON from 'babylonjs';
-import React from 'react';
 
 export type SceneEventArgs = {
   engine: BABYLON.Engine,
@@ -15,7 +14,7 @@ export type SceneProps = {
   height?: number
 };
 
-class BabylonScene extends React.Component<SceneProps & React.HTMLAttributes<HTMLCanvasElement>, {}> {
+export default class Scene extends React.Component<SceneProps & React.HTMLAttributes<HTMLCanvasElement>, {}> {
 
   private scene: BABYLON.Scene;
   private engine: BABYLON.Engine;
@@ -82,4 +81,3 @@ class BabylonScene extends React.Component<SceneProps & React.HTMLAttributes<HTM
     )
   }
 }
-export default BabylonScene;
