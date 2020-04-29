@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as BABYLON from 'babylonjs';
-import BabylonScene from './SceneComponent'; // import the component above linking to file we just created.
+import {SceneEventArgs, SceneComponent} from './SceneComponent'; // import the component above linking to file we just created.
 
 class PageWithScene extends React.Component<{}, {}> {
     onSceneMount = (e: SceneEventArgs) => {
@@ -24,8 +24,9 @@ class PageWithScene extends React.Component<{}, {}> {
     render() {               
         return (
             <div>
-                <BabylonScene onSceneMount={this.onSceneMount} />
+                <SceneComponent onSceneMount={this.onSceneMount} />
             </div>
         )
     }
 }
+export default PageWithScene;
